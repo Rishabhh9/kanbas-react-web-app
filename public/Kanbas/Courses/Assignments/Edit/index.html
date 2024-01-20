@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <select id="editAssignment" name="editAssignment">
+            <option value="SpeedGrader">Speed Grader</option>
+        </select>
+
+        <h2>Assignment Name</h2>
+
+        <form>
+            <input type="text" id="assignmentName" name="assignmentName" value="Assignment Name">
+            <br>
+            <input type="text" id="assignmentDesc" name="assignmentDesc" value="Assignment Desc">
+            <br>
+            <label for="marks">Points</label>
+            <br>
+            <input type="text" id="marks" name="marks">
+            <br>
+            <label for="assignmentGroup">Assignment Group</label>
+            <br>
+            <select id="assignmentGroup" name="assignmentGroup">
+                <option value="assignment">Assignments</option>
+            </select>
+            <br>
+            <label for="gradeDisplay">Display Grade as</label>
+            <br>
+            <select id="gradeDisplay" name="gradeDisplay">
+                <option value="percentage">Percentage</option>
+            </select>
+            <br>
+            <label for="submissionType">Submission Type</label>
+            <br>
+            <select id="submissionType" name="submissionType">
+                <option value="online">Online</option>
+            </select>
+            <br>
+            <label for="options">Online Entry Options</label>
+            <br>
+            <input type="checkbox" id="textEntry" name="textEntry">
+            <label for="textEntry">Text Entry</label>
+            <br>
+            <input type="checkbox" id="website" name="website">
+            <label for="website">Website URL</label>
+            <br>
+            <input type="checkbox" id="media" name="media">
+            <label for="media">Media Recordings</label>
+            <br>
+            <input type="checkbox" id="student" name="student">
+            <label for="student">Student Annotation</label>
+            <br>
+            <input type="checkbox" id="fileUpload" name="fileUpload">
+            <label for="fileUpload">File Upload</label>
+            <br>
+    
+            <label for="dueDate">Due</label>
+            <br>
+            <input type="date" id="dueDate" name="dueDate" value="2023-01-01">
+            <br>
+            <label for="availableFromDate">Available from</label>
+            <br>
+            <input type="date" id="availableFromDate" name="availableFromDate" value="2023-01-01">
+            <br>
+    
+            <label for="untilDate">Until</label>
+            <br>
+            <input type="date" id="untilDate" name="untilDate" value="2023-01-01">
+            <br>
+    
+            <a href="/Kanbas/Courses/Assignments/screen.html">
+                <button type="button">Cancel</button>
+            </a>
+            <a href="/Kanbas/Courses/Assignments/screen.html">
+                <button type="button">Save</button>
+            </a>
+        </form>
+    </body>
+</html>
