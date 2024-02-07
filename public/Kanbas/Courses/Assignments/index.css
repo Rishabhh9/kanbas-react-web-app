@@ -1,0 +1,6 @@
+.rounded-span {
+    
+    border: 2px solid !important;
+    border-radius: 14px !important; /* Border radius */
+    padding: 5px 10px !important;
+  }

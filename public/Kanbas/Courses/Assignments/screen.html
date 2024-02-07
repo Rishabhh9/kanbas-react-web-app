@@ -1,24 +1,27 @@
-<html>
+<!-- <html>
     <head>
-
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
     </head>
     <body>
         <table>
             <tr>
-                <!-- Kanbas Navigations -->
+                
                 <td valign = "top">
-                    <ul>
+                    <ul class="wd-kanbas-navigation">
                         <li>
                             <a href="/Kanbas/Account/Profile/screen.html">Account</a>
                         </li>
-                        <li>
-                            <a href="#">Dashboard</a>
+                        <li class="wd-active">
+                            <a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
                         </li>
                         <li>
-                            <a href="#">Calendar</a>
+                            <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
                         </li>
                         <li>
                             <a href="#">Inbox</a>
@@ -38,13 +41,13 @@
                 
                     </ul>
                 </td>
-                <!-- Course Navigations -->
+                
                 <td valign = "top">
-                    <ul>
+                    <ul class="wd-navigation">
                         <li>
                             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                         </li>
-                        <li>
+                        <li  class="wd-active">
                             <a href="#">Modules</a>
                         </li>
                         <li>
@@ -96,9 +99,10 @@
                             <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
                         </li>
                 
-                    </ul>                
+                    </ul>
+                           
                 </td>
-                <!-- Assignments -->
+                
                 <td valign = "top">
                     <input type="text" id="AssignmentSearch" name="AssignmentSearch" placeholder="Search for Assignment">
                     <button type="button">Group</button>
@@ -181,4 +185,366 @@
             </tr>
         </table>
     </body>
+</html> -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="/Kanbas/Courses/Modules/index.css" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="d-block d-md-none">
+        <span
+            style="text-align: center; display: block; background-color: black; color: white; padding: 10px; margin-bottom: 10px;">
+            CS 5610
+            <br>
+            Assignments
+            <i class="fas fa-bars" style="float: left;"></i>
+            <div style="float: right;">
+                <i class="fas fa-glasses"></i>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </span>
+
+    </div>
+    <div class="d-flex">
+        <div class="d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <li>
+                    <h4 style="color: red; font-weight: bold;">N</h4>
+                </li>
+                <li>
+                    <a href="/Kanbas/Account/Profile/screen.html"><i class="fas fa-user"></i>Account</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Dashboard/screen.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li class="wd-active">
+                    <a href="/Kanbas/Courses/Home/screen.html"><i class="fas fa-book"></i>Courses</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i><br>Inbox</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-history"></i>History</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-palette"></i>Studio</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-c"></i><i class="fas fa-arrow-right"></i>Commons</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-question-circle"></i><br>Help</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="flex-grow-1" style="margin-right: 50px;">
+            <div class="row d-none d-md-block" style="padding-left: 20px;">
+                <div>
+                    <span class="text-danger">
+                        <i class="fas fa-bars mr-2"></i>
+                        CS 5610</span> > Assignments
+
+                    <button style="float: inline-end;"><i class="fas fa-glasses"></i>Student view</button>
+
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-1" style="padding-left: 10px;">
+                    <div class="d-none d-md-block">
+                        <ul class="wd-navigation">
+                            <li>
+                                <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Modules</a>
+                            </li>
+                            <li>
+                                <a href="#">Piazza</a>
+                            </li>
+                            <li>
+                                <a href="#">Zoom Meetings</a>
+                            </li>
+                            <li class="wd-active">
+                                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                            </li>
+                            <li>
+                                <a href="#">Quizzes</a>
+                            </li>
+                            <li>
+                                <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                            </li>
+                            <li>
+                                <a href="#">People</a>
+                            </li>
+                            <li>
+                                <a href="#">Panopto Video</a>
+                            </li>
+                            <li>
+                                <a href="#">Discussions</a>
+                            </li>
+                            <li>
+                                <a href="#">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="#">Pages</a>
+                            </li>
+                            <li>
+                                <a href="#">Files</a>
+                            </li>
+                            <li>
+                                <a href="#">Rubrics</a>
+                            </li>
+                            <li>
+                                <a href="#">Outcomes</a>
+                            </li>
+                            <li>
+                                <a href="#">Collaborations</a>
+                            </li>
+                            <li>
+                                <a href="">Syllabus</a>
+                            </li>
+                            <li>
+                                <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-11" style="padding-left: 100px;">
+                    <div class="flex-fill">
+                        <div class="row">
+                            <span>
+                                <input type="text" id="AssignmentSearch" name="AssignmentSearch"
+                                    class="form-control w-25 float-start" placeholder="Search for Assignment">
+
+                                <span style="float: inline-end;">
+                                    <button type="button" class="btn btn-secondary">+Group</button>
+                                    <button type="button" class="btn btn-danger">+Assignment</button>
+                                    <button type="button" class="btn btn-secondary"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </span>
+                            </span>
+                        </div>
+                        <hr>
+                        <div>
+                            <ul class="list-group wd-modules">
+                                <li class="list-group-item">
+                                    <div><button><i class="fas fa-caret-down"></i></button>
+                                        Assignments
+                                        <span class="float-end">
+                                            <span class="rounded-span">40% of Total</span>
+                                            <button class="btn btn-secondary btn-sm">+</button>
+
+                                            <button class="btn btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+                                        </span>
+                                    </div>
+                                    <ul class="list-group" style="width: 100%;">
+                                        <li class="list-group-item">
+
+
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="/Kanbas/Courses/Assignments/Edit/screen.html"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">A1</span><br>
+                                                <span style="color: black;">Week 0</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+
+
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="/Kanbas/Courses/Assignments/Edit/screen.html"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">A2</span><br>
+                                                <span style="color: black;">Week 2</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="/Kanbas/Courses/Assignments/Edit/screen.html"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">A3</span><br>
+                                                <span style="color: black;">Week 4</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <div><button><i class="fas fa-caret-down"></i></button>
+                                        Quizzes
+                                        <span class="float-end">
+                                            <span class="rounded-span">10% of Total</span>
+                                            <button class="btn btn-secondary btn-sm">+</button>
+
+                                            <button class="btn btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+                                        </span>
+                                    </div>
+                                    <ul class="list-group" style="width: 100%;">
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">Q1</span><br>
+                                                <span style="color: black;">Week 0</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">Q2</span><br>
+                                                <span style="color: black;">Week 2</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">Q3</span><br>
+                                                <span style="color: black;">Week 3</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <div><button><i class="fas fa-caret-down"></i></button>
+                                        Exams
+                                        <span class="float-end">
+                                            <span class="rounded-span">20% of Total</span>
+                                            <button class="btn btn-secondary btn-sm">+</button>
+
+                                            <button class="btn btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+                                        </span>
+                                    </div>
+                                    <ul class="list-group" style="width: 100%;">
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">E1</span><br>
+                                                <span style="color: black;">Week 5</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">E2</span><br>
+                                                <span style="color: black;">Week 10</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">E3</span><br>
+                                                <span style="color: black;">Week 14</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <div><button><i class="fas fa-caret-down"></i></button>
+                                        Project
+                                        <span class="float-end">
+                                            <span class="rounded-span">30% of Total</span>
+                                            <button class="btn btn-secondary btn-sm">+</button>
+
+                                            <button class="btn btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+                                        </span>
+                                    </div>
+                                    <ul class="list-group" style="width: 100%;">
+                                        <li class="list-group-item">
+                                            <i class="fas fa-book"
+                                                style="vertical-align: middle; margin-right: 5px; color: green;"></i>
+                                            <a href="#"
+                                                style="font-size: small; display: inline-block; vertical-align: middle;">
+                                                <span style="color: black; font-weight: bold;">P1</span><br>
+                                                <span style="color: black;">Week 14</span><br>
+                                                <span style="color: black;">Due Date</span><br>
+                                            </a>
+                                            <span style="float: right; vertical-align: middle;">
+                                                <i class="fas fa-check-circle" style="color: green;"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

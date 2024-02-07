@@ -1,84 +1,96 @@
 <html>
-    <head>
 
-    </head>
-    <body>
-        <input type="text" id="AssignmentSearch" name="AssignmentSearch" placeholder="Search for Assignment">
-        <button type="button">Group</button>
-        <button type="button">Assignment</button>
-        <select id="selectOption" name="selectOption">
-            <option value="Edit">Edit Assignment Dates</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-        <h2>Assignments 40% of Total </h2>
-        <select id="dropdown1" name="dropdown1">
-            <option value="Edit">Edit</option>
-            <option value="SpeedGrader">Speed Grader</option>
-            <option value="Duplicate">Duplicate</option>
-            <option value="Delete">Delete</option>
-            <option value="MoveTo">Move To</option>
-            <option value="SendTo">Send To</option>
-            <option value="CopyTo">Copy To</option>
-            <option value="Share">Share to common</option>
-        </select>
-        <ul>
-            <li><a href="#">A1</a></li>
-            <li><a href="#">A2</a></li>
-            <li><a href="#">A3</a></li>
-        </ul>
-    
-        <h2>Quizzes 10% of Total</h2>
-        <select id="dropdown2" name="dropdown2">
-            <option value="Edit">Edit</option>
-            <option value="SpeedGrader">Speed Grader</option>
-            <option value="Duplicate">Duplicate</option>
-            <option value="Delete">Delete</option>
-            <option value="MoveTo">Move To</option>
-            <option value="SendTo">Send To</option>
-            <option value="CopyTo">Copy To</option>
-            <option value="Share">Share to common</option>
+<body>
+    <div class="row">
+        <div class="col">
+          <input type="text" id="AssignmentSearch" name="AssignmentSearch" class="form-control w-25 float-start" placeholder="Search for Assignment">
+        </div>
+        <div class="col float-end">
+          <button type="button" class="btn btn-primary">+Group</button>
+          <button type="button" class="btn btn-primary">+Assignment</button>
+          <button type="button" class="btn btn-primary"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+<!--     
+    <select id="selectOption" name="selectOption">
+        <option value="Edit">Edit Assignment Dates</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select> -->
 
-        </select>
-        <ul>
-            <li><a href="#">Q1</a></li>
-            <li><a href="#">Q2</a></li>
-            <li><a href="#">Q3</a></li>
-        </ul>
-    
-        <h2>Exams 20% of Total</h2>
-        <select id="dropdown3" name="dropdown3">
-            <option value="Edit">Edit</option>
-            <option value="SpeedGrader">Speed Grader</option>
-            <option value="Duplicate">Duplicate</option>
-            <option value="Delete">Delete</option>
-            <option value="MoveTo">Move To</option>
-            <option value="SendTo">Send To</option>
-            <option value="CopyTo">Copy To</option>
-            <option value="Share">Share to common</option>
+    <h2>Assignments 40% of Total </h2>
+    <select id="dropdown1" name="dropdown1">
+        <option value="Edit">Edit</option>
+        <option value="SpeedGrader">Speed Grader</option>
+        <option value="Duplicate">Duplicate</option>
+        <option value="Delete">Delete</option>
+        <option value="MoveTo">Move To</option>
+        <option value="SendTo">Send To</option>
+        <option value="CopyTo">Copy To</option>
+        <option value="Share">Share to common</option>
+    </select>
+    <ul class="list-group">
+        <li class="list-group-item" style="font-weight: bold;"><a href="#">A1</a></li>
+        <li class="list-group-item" style="font-weight: bold;"><a href="#">A2</a></li>
+        <li class="list-group-item" style="font-weight: bold;"><a href="#">A3</a></li>
+    </ul>
 
-        </select>
-        <ul>
-            <li><a href="#">Exam 1</a></li>
-            <li><a href="#">Exam 2</a></li>
-            <li><a href="#">Exam 3</a></li>
-        </ul>
-    
-        <h2>Project 30% of Total</h2>
-        <select id="dropdown4" name="dropdown4">
-            <option value="Edit">Edit</option>
-            <option value="SpeedGrader">Speed Grader</option>
-            <option value="Duplicate">Duplicate</option>
-            <option value="Delete">Delete</option>
-            <option value="MoveTo">Move To</option>
-            <option value="SendTo">Send To</option>
-            <option value="CopyTo">Copy To</option>
-            <option value="Share">Share to common</option>
+    <h2>Quizzes 10% of Total</h2>
+    <select id="dropdown2" name="dropdown2">
+        <option value="Edit">Edit</option>
+        <option value="SpeedGrader">Speed Grader</option>
+        <option value="Duplicate">Duplicate</option>
+        <option value="Delete">Delete</option>
+        <option value="MoveTo">Move To</option>
+        <option value="SendTo">Send To</option>
+        <option value="CopyTo">Copy To</option>
+        <option value="Share">Share to common</option>
 
-        </select>
-        <ul>
-            <li><a href="#">Project Link</a></li>
-        </ul>
-    </body>
+    </select>
+    <ul>
+        <li><a href="#">Q1</a></li>
+        <li><a href="#">Q2</a></li>
+        <li><a href="#">Q3</a></li>
+    </ul>
+
+    <h2>Exams 20% of Total</h2>
+    <select id="dropdown3" name="dropdown3">
+        <option value="Edit">Edit</option>
+        <option value="SpeedGrader">Speed Grader</option>
+        <option value="Duplicate">Duplicate</option>
+        <option value="Delete">Delete</option>
+        <option value="MoveTo">Move To</option>
+        <option value="SendTo">Send To</option>
+        <option value="CopyTo">Copy To</option>
+        <option value="Share">Share to common</option>
+
+    </select>
+    <ul>
+        <li><a href="#">Exam 1</a></li>
+        <li><a href="#">Exam 2</a></li>
+        <li><a href="#">Exam 3</a></li>
+    </ul>
+
+    <h2>Project 30% of Total</h2>
+    <select id="dropdown4" name="dropdown4">
+        <option value="Edit">Edit</option>
+        <option value="SpeedGrader">Speed Grader</option>
+        <option value="Duplicate">Duplicate</option>
+        <option value="Delete">Delete</option>
+        <option value="MoveTo">Move To</option>
+        <option value="SendTo">Send To</option>
+        <option value="CopyTo">Copy To</option>
+        <option value="Share">Share to common</option>
+
+    </select>
+    <ul>
+        <li><a href="#">Project Link</a></li>
+    </ul>
+</body>
+
 </html>
