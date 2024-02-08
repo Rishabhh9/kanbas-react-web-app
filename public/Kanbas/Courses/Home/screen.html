@@ -10,14 +10,130 @@
 </head>
 
 <body>
+
+    <div id="kanbasModal" class="modal">
+
+
+        <div class="modal-content" style="display: block;">
+            <span class="close" style="float: inline-end;">&times;</span>
+            <ul style="list-style-type: none;">
+                <li style="padding-bottom: 10px;">
+                    <a href="/Kanbas/Account/Profile/screen.html" style="color: red"><i
+                            class="fas fa-user"></i>Account</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="/Kanbas/Dashboard/screen.html" style="color: red"><i
+                            class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="/Kanbas/Courses/Home/screen.html" style="color: red"><i class="fas fa-book"></i>Courses</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fa fa-calendar"></i>Calendar</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fas fa-envelope"></i>Inbox</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fas fa-history"></i>History</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fas fa-palette"></i>Studio</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fas fa-c"></i><i class="fas fa-arrow-right"></i>Commons</a>
+                </li>
+                <li style="padding-bottom: 10px;">
+                    <a href="#" style="color: red"><i class="fas fa-question-circle"></i>Help</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="courseNavModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="display: block;">
+            <span class="close" style="float: inline-end;" onclick="closeCourseNavModal()">&times;</span>
+            <ul style="list-style-type: none;">
+                <li>
+                    <a href="/Kanbas/Courses/Home/screen.html" style="color: red;"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-cubes"></i>Modules</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fab fa-piazza"></i>Piazza</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-video"></i>Zoom Meetings</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Assignments/screen.html" style="color: red;"><i
+                            class="fas fa-book"></i>Assignments</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-pencil-alt"></i>Quizzes</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Grades/screen.html" style="color: red;"><i
+                            class="fas fa-trophy"></i>Grades</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-user"></i>People</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-film"></i>Panopto Video</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-comments"></i>Discussions</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-bullhorn"></i>Announcements</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-book-open"></i>Pages</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-file"></i>Files</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-list-alt"></i>Rubrics</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-bullseye"></i>Outcomes</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-users"></i>Collaborations</a>
+                </li>
+                <li>
+                    <a href="#" style="color: red;"><i class="fas fa-scroll"></i>Syllabus</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html" style="color: red;"><i
+                            class="fas fa-cog"></i>Settings</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+
+
     <div class="d-block d-md-none">
         <span
             style="text-align: center; display: block; background-color: black; color: white; padding: 10px; margin-bottom: 10px;">
             CS 5610
             <br>
             MODULES
-            <i class="fas fa-bars" style="float: left;"></i>
-            <div style="float: right;">
+            <div id="openModal" style="cursor: pointer;">
+                <i class="fas fa-bars" style="float: left; margin-top: -10px;"></i>
+            </div>
+
+            <div id="openCourseNav" style="float: right; margin-top: -10px;">
                 <i class="fas fa-glasses"></i>
                 <i class="fas fa-chevron-down"></i>
             </div>
@@ -311,3 +427,54 @@
 </body>
 
 </html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("kanbasModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Get the modal
+    var courseNavModal = document.getElementById("courseNavModal");
+
+    // Get the button that opens the modal
+    var openCourseNav = document.getElementById("openCourseNav");
+
+    // Function to open the modal
+    openCourseNav.onclick = function () {
+        courseNavModal.style.display = "block";
+    }
+
+    // Function to close the modal
+    function closeCourseNavModal() {
+        courseNavModal.style.display = "none";
+    }
+
+    // Close the modal when clicking anywhere outside of it
+    window.onclick = function (event) {
+        if (event.target == courseNavModal) {
+            courseNavModal.style.display = "none";
+        }
+    }
+</script>
