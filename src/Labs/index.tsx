@@ -1,7 +1,7 @@
 import Assignment3 from "./a3";
 import Nav from "../Nav";
 import { Link } from "react-router-dom";
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
 
 
 function Labs() {

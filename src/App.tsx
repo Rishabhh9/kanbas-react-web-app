@@ -26,7 +26,7 @@ function App() {
     //   </header>
     // </div>
     <HashRouter>
-      <>
+      <div>
         <Routes>
           <Route path="/" element={<Navigate to="/Labs" />} />
 
@@ -34,7 +34,7 @@ function App() {
           <Route path="/Kanbas/*" element={<Kanbas />} />
           <Route path="/hello" element={<HelloWorld />} />
         </Routes>
-      </>
+      </div>
     </HashRouter>
   );
 }
