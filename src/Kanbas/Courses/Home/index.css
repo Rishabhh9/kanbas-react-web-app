@@ -1,0 +1,12 @@
+.wd-course-status-buttons{
+    width: 100%;
+}
+
+.wd-course-status-todo-tag{
+    font-weight: bold; 
+    margin-bottom: -15;
+}
+
+.fs-2{
+    color: red;
+}
