@@ -19,7 +19,7 @@ function Courses() {
       <div style={{ display: "flex" }}>
         <HiMiniBars3 style={{ "color": "red", paddingLeft: "30px", fontSize: "3.5em" }} /><NavigationBreadcrumb />
         <div style={{ marginLeft: 'auto', marginTop: "16px" }}>
-          <Button className="wd-button-view"><FaGlasses style={{ paddingRight: "3px", paddingBottom: "3px" }} />Student View</Button>
+          <Button className="wd-button-view btn btn-secondary" ><FaGlasses style={{ paddingRight: "3px", paddingBottom: "3px" }} />Student View</Button>
         </div>
       </div>
       <hr style={{ width: '100%' }} />

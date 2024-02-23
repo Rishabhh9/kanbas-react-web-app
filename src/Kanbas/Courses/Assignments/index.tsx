@@ -19,9 +19,9 @@ function Assignments() {
           />
         </div>
         <div className="col float-end" style={{ display: "flex", justifyContent: "right" }}>
-          <button type="button" className="btn btn-primary">+Group</button>
-          <button type="button" className="btn btn-primary">+Assignment</button>
-          <button type="button" className="btn btn-primary"><FaEllipsisV /></button>
+          <button type="button" className="btn btn-secondary">+Group</button>
+          <button type="button" className="btn btn-danger">+Assignment</button>
+          <button type="button" className="btn btn-secondary"><FaEllipsisV /></button>
         </div>
       </div>
       <ul className="list-group wd-modules">
