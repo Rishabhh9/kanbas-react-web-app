@@ -11,8 +11,9 @@ import { FaGlasses } from "react-icons/fa";
 import NavigationBreadcrumb from "./Breadcrum";
 import Button from 'react-bootstrap/Button';
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
+  //const course = courses.find((course) => course._id === courseId);
   const course = courses.find((course) => course._id === courseId);
   return (
     <div>

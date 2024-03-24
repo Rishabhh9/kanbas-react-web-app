@@ -35,3 +35,7 @@
   display: flex;
   justify-content: right;
 }
+
+.float-right {
+  float: right;
+}
