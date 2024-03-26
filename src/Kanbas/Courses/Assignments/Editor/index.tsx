@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { assignments } from "../../../Database";
 import { FaEllipsisV } from 'react-icons/fa';
+import { useSelector, useDispatch } from "react-redux";
+import { KanbasState } from "../../../store";
+import { addAssignments, deleteAssignments, updateAssignments, setAssignments, } from "../assignmentsReducer";
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
+
+
+  // const assignment = assignments.find(
+  //   (assignment) => assignment._id === assignmentId);
   const { courseId } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const assignmentList = useSelector((state: KanbasState) =>
+    state.assignmentReducer.assignments);
+  const assignment = useSelector((state: KanbasState) =>
+    state.assignmentReducer.assignment);
+  const check_exisiting_assignment = assignmentList.find((assignment) => assignment._id === assignmentId)
+  useEffect(() => {
+    if (check_exisiting_assignment !== undefined) {
+      dispatch(setAssignments(check_exisiting_assignment))
+    } else {
+      dispatch(setAssignments([]))
+    }
+  }, [])
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    if (check_exisiting_assignment !== undefined) {
+      dispatch(updateAssignments(assignment))
+    } else {
+      dispatch(addAssignments({ ...assignment, course: courseId, _id: assignmentId }))
+    };
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`)
   };
   return (
     <>
@@ -42,10 +64,12 @@ function AssignmentEditor() {
         <div className="col-md-10">
           <div className="form-group" style={{ paddingTop: '10px' }}>
             <label htmlFor="assignmentName">Assignment Name</label>
-            <input type="text" className="form-control" id="assignmentName" name="assignmentName" value={assignment?.title} style={{ marginTop: '12px' }} />
+            <input type="text" className="form-control" id="assignmentName" name="assignmentName" value={assignment?.title} onChange={(e) => dispatch(setAssignments({ ...assignment, title: e.target.value }))}
+              style={{ marginTop: '12px' }} />
           </div>
           <div className="form-group">
-            <textarea className="form-control" id="assignmentDesc" name="assignmentDesc" style={{ marginTop: '12px' }}>This assignment is an example for the upcoming assignments. It helps to set the environment and learn HTML</textarea>
+            <textarea className="form-control" id="assignmentDesc" name="assignmentDesc" style={{ marginTop: '12px' }} value={assignment?.description}
+              onChange={(e) => dispatch(setAssignments({ ...assignment, description: e.target.value }))}></textarea>
           </div>
         </div>
 
@@ -57,7 +81,8 @@ function AssignmentEditor() {
           </div>
           <div className="col-md-7">
             <div className="form-group" style={{ marginTop: '12px' }}>
-              <input type="number" className="form-control" id="marks" name="marks" />
+              <input type="number" className="form-control" id="marks" name="marks" value={assignment?.points}
+                onChange={(e) => dispatch(setAssignments({ ...assignment, points: e.target.value }))} />
             </div>
           </div>
         </div>
@@ -113,7 +138,8 @@ function AssignmentEditor() {
               <p style={{ fontSize: '20px', fontWeight: 'bold' }}> Assign To </p>
               <input type="text" className="form-control" />
               <p style={{ fontSize: '20px', fontWeight: 'bold', paddingTop: '5px' }}> Due </p>
-              <input type="date" className="form-control" id="dueDate" name="dueDate" value="2023-01-01" />
+              <input type="date" className="form-control" id="dueDate" name="dueDate" value={assignment?.Due}
+                onChange={(e) => dispatch(setAssignments({ ...assignment, Due: e.target.value }))} />
               <div className="row" style={{ paddingTop: '5px' }}>
                 <div className="col-md-6">
                   <p style={{ fontSize: '15px', fontWeight: 'bold' }}> Available From </p>
@@ -124,10 +150,12 @@ function AssignmentEditor() {
               </div>
               <div className="row" style={{ paddingTop: '5px' }}>
                 <div className="col-md-6">
-                  <input type="date" className="form-control" id="availableFromDate" name="availableFromDate" value="2023-01-01" />
+                  <input type="date" className="form-control" id="availableFromDate" name="availableFromDate" value={assignment?.availableFrom}
+                    onChange={(e) => dispatch(setAssignments({ ...assignment, availableFrom: e.target.value }))} />
                 </div>
                 <div className="col-md-6">
-                  <input type="date" className="form-control" id="untilDate" name="untilDate" value="2023-01-01" />
+                  <input type="date" className="form-control" id="untilDate" name="untilDate" value={assignment?.Until}
+                    onChange={(e) => dispatch(setAssignments({ ...assignment, Until: e.target.value }))} />
                 </div>
               </div>
               <button className="btn btn-secondary" style={{ marginTop: '10px', width: '100%' }}>+Add</button>
