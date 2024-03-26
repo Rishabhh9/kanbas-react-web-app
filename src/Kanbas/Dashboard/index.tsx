@@ -53,10 +53,10 @@ function Dashboard(
         onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
       <input value={course.endDate} className="form-control" type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-      <button onClick={addNewCourse} >
+      <button className="btn btn-success" onClick={addNewCourse} >
         Add
       </button>
-      <button onClick={updateCourse} >
+      <button className="btn btn-primary" onClick={updateCourse} >
         Update
       </button>
 
@@ -74,14 +74,14 @@ function Dashboard(
                   <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                     style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name}
-                    <button onClick={(event) => {
+                    <button style={{backgroundColor: "blue", color: "white"}} onClick={(event) => {
                       event.preventDefault();
                       setCourse(course);
                     }}>
                       Edit
                     </button>
 
-                    <button onClick={(event) => {
+                    <button style={{backgroundColor: "red", color: "white"}} onClick={(event) => {
                       event.preventDefault();
                       deleteCourse(course._id);
                     }}>
